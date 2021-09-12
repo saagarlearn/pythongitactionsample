@@ -4,12 +4,14 @@ on:
     inputs:
       SourceServer:
         description: Source Server
+        default: devsemarchy.eastus.cloudapp.azure.com
         required: true
       SourcePort:
         description: Source Port
         required: false
       DestinationServer:
         description: Destination Server
+        default: prodsemarchy.eastus.cloudapp.azure.com
         required: true
       DestinationPort:  
         description: Destination Port

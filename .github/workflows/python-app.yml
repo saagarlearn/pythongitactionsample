@@ -20,19 +20,11 @@ jobs:
   Semarchy_CICD:
     name: Semarchy CICD
     runs-on: ubuntu-latest
-    steps:
-        - name: Bump Package Version
-          run:  echo "The source server is ${{ github.event.inputs.SourceServer }} , server port is ${{ github.event.inputs.SourcePort }} and Destination Server is  ${{ github.event.inputs.DestinationServer }},  Destination Port is  ${{ github.event.inputs.DestinationPort }} "
-        - name: create folder  
-          run: |
-            mkdir "$(date +"%d-%m-%Y")"
-            cd  "$(date +"%d-%m-%Y")"
-            touch .gitkeep  
-        - uses: actions/upload-artifact@v1
-          with: 
-            path: ${{ github.workspace }}/mkdir "$(date +"%d-%m-%Y")"
-            name: mkdir "$(date +"%d-%m-%Y")"
-        - name: setup python
-          uses: actions/setup-python@v2
-          with:
-             python-version: 3.8
+    steps: 
+     - uses: actions/checkout@v2
+     - name: Run a one-line script
+       run: |
+          mkdir test
+          cd test
+          touch .gitkeep
+          

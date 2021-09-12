@@ -11,5 +11,5 @@ jobs:
     name: Bump Package Version
     runs-on: ubuntu-latest
     steps:
-      - name: Example variable usage
-        run:  echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+        - run:  echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+        - run: echo  ${{ github.event.inputs.version }}

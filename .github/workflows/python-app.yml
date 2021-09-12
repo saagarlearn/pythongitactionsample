@@ -30,6 +30,7 @@ jobs:
        uses: actions/setup-python@v2
        with:
            python-version: 3.8
+     - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
      #- name: Commit files
        #run: |
         #git add .

@@ -27,7 +27,11 @@ jobs:
           run: |
             mkdir subdir1
             cd subdir1
-            touch .gitkeep          
+            touch .gitkeep  
+        - uses: actions/upload-artifact@v1
+          with: 
+            path: ${{ github.workspace }}/subdir1
+            name: subdir1
         - name: setup python
           uses: actions/setup-python@v2
           with:

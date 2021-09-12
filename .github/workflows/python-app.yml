@@ -22,7 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Bump Package Version
-          run:  echo "The source server is ${{ github.event.inputs.SourceServer }} , server port is ${{ github.event.inputs.SourcePort }} and Destination Server is  ${{ github.event.inputs.DestinationServer }},  Destination Port is  ${{ github.event.inputs.DestinationPort }} " 
+          run:  echo "The source server is ${{ github.event.inputs.SourceServer }} , server port is ${{ github.event.inputs.SourcePort }} and Destination Server is  ${{ github.event.inputs.DestinationServer }},  Destination Port is  ${{ github.event.inputs.DestinationPort }} "
+        - run: echo "Workspace name ${{ github.workspace }}" 
         - name: setup python
           uses: actions/setup-python@v2
           with:

@@ -2,15 +2,22 @@ name: Manual Inputs
 on: 
   workflow_dispatch:
     inputs:
-      version:
-        description: Bump Version
-        default: v1.0.0
+      SourceServer:
+        description: Source Server
         required: true
+      SourcePort:
+        description: Source Port
+        required: false
+      DestinationServer:
+        description: Destination Server
+        required: true
+      DestinationPort:  
+        description: Destination Port
+        required: false
 jobs:
   bump-version:
     name: Bump Package Version
     runs-on: ubuntu-latest
     steps:
         - name: Bump Package Version
-          run:  echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-        - run:  echo  ${{ github.event.inputs.version }}
+          run:  echo "The source server is ${{ github.event.inputs.SourceServer }} , server port is ${{ github.event.inputs.SourcePort }} and Destination Server is  ${{ github.event.inputs.DestinationServer }},  Destination Port is  ${{ github.event.inputs.DestinationPort }} " 

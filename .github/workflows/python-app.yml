@@ -26,6 +26,10 @@ jobs:
        run: |
           mkdir "SourceExtract/$(date +"%d-%m-%Y")" && cd $_
           touch .gitkeep
+     - name: setup python
+       uses: actions/setup-python@v2
+       with:
+           python-version: 3.8
      #- name: Commit files
        #run: |
         #git add .

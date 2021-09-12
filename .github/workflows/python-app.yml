@@ -25,7 +25,7 @@ jobs:
           run:  echo "The source server is ${{ github.event.inputs.SourceServer }} , server port is ${{ github.event.inputs.SourcePort }} and Destination Server is  ${{ github.event.inputs.DestinationServer }},  Destination Port is  ${{ github.event.inputs.DestinationPort }} "
         - name: create folder  
           run: |
-            mkdir $(date +"%d-%m-%Y")"
+            mkdir "$(date +"%d-%m-%Y")"
             cd  "$(date +"%d-%m-%Y")"
             touch .gitkeep  
         - uses: actions/upload-artifact@v1

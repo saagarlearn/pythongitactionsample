@@ -1,4 +1,4 @@
-
+oi
 name: Manual Inputs
 on: 
   workflow_dispatch:
@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Example variable usage
-        run: git tag ${{ github.event.inputs.version }}
+        run: echo ${{ github.event.inputs.version }}

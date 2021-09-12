@@ -24,8 +24,7 @@ jobs:
      - uses: actions/checkout@v2
      - name: Run a one-line script
        run: |
-          mkdir test
-          cd test
+          mkdir "$(date +"%d-%m-%Y")" && cd $_
           touch .gitkeep
      - name: Commit files
        run: |

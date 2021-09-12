@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Example variable usage
-        run: echo ${{ github.event.inputs.version }}
+        run:  echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."

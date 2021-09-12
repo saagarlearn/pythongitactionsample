@@ -23,7 +23,8 @@ jobs:
     steps:
         - name: Bump Package Version
           run:  echo "The source server is ${{ github.event.inputs.SourceServer }} , server port is ${{ github.event.inputs.SourcePort }} and Destination Server is  ${{ github.event.inputs.DestinationServer }},  Destination Port is  ${{ github.event.inputs.DestinationPort }} "
-        - run: echo "Workspace name ${{ github.workspace }}" 
+        - name: create folder  
+          run: mkdir "$(date +"%d-%m-%Y")"
         - name: setup python
           uses: actions/setup-python@v2
           with:

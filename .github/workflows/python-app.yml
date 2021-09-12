@@ -24,7 +24,7 @@ jobs:
      - uses: actions/checkout@v2
      - name: Create folder with todays date
        run: |
-          mkdir "/SourceExtract/$(date +"%d-%m-%Y")" && cd $_
+          mkdir "$(date +"%d-%m-%Y")" && cd $_
           touch .gitkeep
      - name: setup python
        uses: actions/setup-python@v2

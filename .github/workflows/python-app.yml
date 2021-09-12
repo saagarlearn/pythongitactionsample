@@ -1,4 +1,3 @@
-oi
 name: Manual Inputs
 on: 
   workflow_dispatch:

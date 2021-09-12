@@ -15,9 +15,11 @@ on:
         description: Destination Port
         required: false
 jobs:
-  bump-version:
-    name: Bump Package Version
+  Semarchy_CICD:
+    name: Semarchy CICD
     runs-on: ubuntu-latest
     steps:
         - name: Bump Package Version
           run:  echo "The source server is ${{ github.event.inputs.SourceServer }} , server port is ${{ github.event.inputs.SourcePort }} and Destination Server is  ${{ github.event.inputs.DestinationServer }},  Destination Port is  ${{ github.event.inputs.DestinationPort }} " 
+        - name: Create source folder for export
+          run : mkdir -p  ${{ github.workspace }}/config

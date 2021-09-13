@@ -15,7 +15,8 @@ if len(sys.argv) != 7:
     print("Insufficient arguments")
     quit()
 
-print("Test client for Semarchy admin class" +str(len(sys.argv)))
+print("Args len " +str(len(sys.argv)))
+print("4th argument " sys.argv[4])
 
 
 if sys.argv[1]=="deploy":

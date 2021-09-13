@@ -16,7 +16,7 @@ on:
         required: true
       DestinationPort:  
         description: Destination Port
-        default: "NA"
+        default: "8088"
         required: false
       ModelName:  
         description: Model Name

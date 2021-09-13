@@ -21,7 +21,7 @@ print("4th argument " +sys.argv[4])
 
 if sys.argv[1]=="deploy":
     if sys.argv[4] == "NA":
-         print("Without port")
+        print("Without port")
         sourceClient = SemarchyClient(sys.argv[3],"","semadmin","semadmin")
     else:
         print("With port")

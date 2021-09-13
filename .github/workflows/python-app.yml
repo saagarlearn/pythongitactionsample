@@ -42,7 +42,7 @@ jobs:
      - name: execute python script
        run: |
         pip install requests
-        python ./pythonscripts/WrapperSemarchyadmin.py export ${{ github.event.inputs.ModelName }} ${{ github.event.inputs.SourceServer }} ${{ github.event.inputs.SourcePort }}
+        python ./pythonscripts/WrapperSemarchyadmin.py export ${{ github.event.inputs.ModelName }} ${{ github.event.inputs.SourceServer }} ${{ github.event.inputs.SourcePort }} ${{ github.event.inputs.DestinationServer }} ${{ github.event.inputs.DestinationPort }}
      - name: Commit files
        run: |
         git add .

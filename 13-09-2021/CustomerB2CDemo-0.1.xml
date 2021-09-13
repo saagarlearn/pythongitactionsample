@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Status 500</title>
+
+	<link rel="stylesheet prefetch" href="/semarchy/login/res/material.min.css">
+	<link rel="stylesheet" href="/semarchy/login/res/style.css">
+
+	<link rel='icon' href='/semarchy/img/favicon.ico' type='image/x-icon' />
+</head>
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+		<main class="mdl-layout__content">
+			<div class="mdl-card sem-card--login mdl-shadow--6dp">
+				<div class="mdl-card__title mdl-color--grey-200" style="background:url('/semarchy/login/res/login-product-logo.png') center / cover;">
+				</div>
+			 	<div class="mdl-card__supporting-text">
+			 		<h3 class="mdl-typography--title">
+			 			500 Internal Server Error
+			 		</h3>
+			 		<div>
+			 		
+						Something has gone wrong on the server. If the problem persists, please contact your administrator.
+					
+					</div>
+					
+					
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="/semarchy/login/res/material.min.js"></script>
+</body>
+</html>

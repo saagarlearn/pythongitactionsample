@@ -20,7 +20,7 @@ print("4th argument " +sys.argv[4])
 
 
 if sys.argv[1]=="deploy":
-    if len(sys.argv[4]) == "NA":
+    if sys.argv[4] == "NA":
         sourceClient = SemarchyClient(sys.argv[3],"","semadmin","semadmin")
     else:
         sourceClient = SemarchyClient(sys.argv[3],sys.argv[4],"semadmin","semadmin")

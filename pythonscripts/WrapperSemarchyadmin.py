@@ -9,7 +9,7 @@ from mainapp import SemarchyClient
 #to export e.g py WrapperSemarchyadmin.py <export/import> <modelname> <Server> <port>
 modelName="CustomerB2CDemo"
 outputfilename="CustomerB2CDemo_0.1.xml"
-
+print(len(sys.argv))
 
 if len(sys.argv) != 5:
     print("Insufficient arguments")

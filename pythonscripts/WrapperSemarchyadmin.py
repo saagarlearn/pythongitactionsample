@@ -42,7 +42,7 @@ if sys.argv[1]=="deploy":
     print("Model Exported completed and saved to file "+outputfilename)
     #import into the target
     print("import to target "+outputfilename)
-    print("file size " +os.path.getsize("outputfilename"))
+    print("file size " +os.path.getsize(outputfilename))
     openFile = open(outputfilename,"rb")
     xmldata = openFile.read()
     if sys.argv[5] == "NA":

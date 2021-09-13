@@ -1,3 +1,4 @@
+
 import sys
 from datetime import datetime
 import mainapp
@@ -19,7 +20,10 @@ print("Test client for Semarchy admin class" +str(len(sys.argv)))
 
 
 if sys.argv[1]=="export":
-    sourceClient = SemarchyClient(sys.argv[3],sys.argv[4],"semadmin","semadmin")
+    if len(sys.argv) == 4:
+        sourceClient = SemarchyClient(sys.argv[3],"","semadmin","semadmin")
+    else:   
+        sourceClient = SemarchyClient(sys.argv[3],sys.argv[4],"semadmin","semadmin")
     try:
         latestModelVersion = sourceClient.getLatestCloseModelKey(sys.argv[2])
     except CustomValidationError as exception:

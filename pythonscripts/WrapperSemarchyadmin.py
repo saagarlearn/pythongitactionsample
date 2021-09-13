@@ -21,11 +21,11 @@ print("4th argument " +sys.argv[4])
 
 if sys.argv[1]=="deploy":
     if sys.argv[4] == "NA":
+         print("Without port")
         sourceClient = SemarchyClient(sys.argv[3],"","semadmin","semadmin")
     else:
-        print("WTF")
-        sourceClient = SemarchyClient(sys.argv[3],sys.argv[4],"semadmin","semadmin")
-    '''    
+        print("With port")
+        sourceClient = SemarchyClient(sys.argv[3],sys.argv[4],"semadmin","semadmin")   
     try:
         latestModelVersion = sourceClient.getLatestCloseModelKey(sys.argv[2])
     except CustomValidationError as exception:
@@ -38,7 +38,6 @@ if sys.argv[1]=="deploy":
     with open(outputfilename, "wb") as f:
         f.write(modelExport.content)
     print("Model Exported completed and saved to file "+outputfilename)
- '''
 else:
     print("Bye!")
     quit()

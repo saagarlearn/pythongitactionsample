@@ -16,6 +16,10 @@ on:
       DestinationPort:  
         description: Destination Port
         required: false
+      ModelName:  
+        description: Model Name
+        default: CustomerB2CDemo
+        required: false
 jobs:
   Semarchy_CICD:
     name: Semarchy CICD
@@ -34,7 +38,7 @@ jobs:
      - name: execute python script
        run: |
         pip install requests
-        python ./pythonscripts/WrapperSemarchyadmin.py export CustomerB2CDemo devsemarchy.eastus.cloudapp.azure.com ""
+        python ./pythonscripts/WrapperSemarchyadmin.py export ${{ github.event.inputs.ModelName }} ${{ github.event.inputs.SourceServer }} ${{ github.event.inputs.SourcePort }}
      - name: Commit files
        run: |
         git add .

@@ -51,7 +51,7 @@ if sys.argv[1]=="deploy":
     else:
         print("Target with port")
         targetClient = SemarchyClient(sys.argv[5],sys.argv[6],"semadmin","semadmin")
-    r=targetClient.importModelEdition(xmldata)
+    r=targetClient.importModelEdition(modelExport.content)
     if r.status_code == 200:
          print("Model imported successfully to the target")
     else:

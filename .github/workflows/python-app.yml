@@ -33,6 +33,7 @@ jobs:
      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
      - name: execute python script
        run: |
+        pip install requests
         python ./pythonscripts/WrapperSemarchyadmin.py export CustomerB2CDemo devsemarchy.eastus.cloudapp.azure.com ""
      #- name: Commit files
        #run: |

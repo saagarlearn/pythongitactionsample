@@ -8,7 +8,7 @@ on:
         required: true
       SourcePort:
         description: Source Port
-        default: " "
+        default: "NA"
         required: false
       DestinationServer:
         description: Destination Server
@@ -16,7 +16,7 @@ on:
         required: true
       DestinationPort:  
         description: Destination Port
-        default: " "
+        default: "NA"
         required: false
       ModelName:  
         description: Model Name

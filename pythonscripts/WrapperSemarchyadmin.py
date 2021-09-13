@@ -23,6 +23,7 @@ if sys.argv[1]=="deploy":
     if sys.argv[4] == "NA":
         sourceClient = SemarchyClient(sys.argv[3],"","semadmin","semadmin")
     else:
+        print("WTF")
         sourceClient = SemarchyClient(sys.argv[3],sys.argv[4],"semadmin","semadmin")
     try:
         latestModelVersion = sourceClient.getLatestCloseModelKey(sys.argv[2])

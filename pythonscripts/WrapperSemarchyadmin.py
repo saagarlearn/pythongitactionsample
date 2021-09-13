@@ -40,12 +40,15 @@ if sys.argv[1]=="deploy":
         f.write(modelExport.content)
     print("Model Exported completed and saved to file "+outputfilename)
     #import into the target
-    print("import to target")
+    print("import to target "+outputfilename)
+    print("file size " +os.path.getsize("outputfilename"))
     openFile = open(outputfilename,"rb")
     xmldata = openFile.read()
     if sys.argv[5] == "NA":
+        print("Target no port")
         targetClient = SemarchyClient(sys.argv[5],"","semadmin","semadmin")
     else:
+        print("Target with port")
         targetClient = SemarchyClient(sys.argv[5],sys.argv[6],"semadmin","semadmin")
     r=targetClient.importModelEdition(xmldata)
     if r.status_code == 200:

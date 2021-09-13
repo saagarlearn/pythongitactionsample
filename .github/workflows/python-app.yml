@@ -31,6 +31,9 @@ jobs:
        with:
            python-version: 3.8
      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+     - name: execute python script
+       run: |
+        python ./pythonscripts/smalltest.py
      #- name: Commit files
        #run: |
         #git add .

@@ -11,7 +11,7 @@ modelName="CustomerB2CDemo"
 outputfilename="CustomerB2CDemo_0.1.xml"
 print(len(sys.argv))
 
-if len(sys.argv) != 5:
+if len(sys.argv) < 4:
     print("Insufficient arguments")
     quit()
 

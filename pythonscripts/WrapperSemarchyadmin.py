@@ -16,7 +16,7 @@ if len(sys.argv) != 7:
     quit()
 
 print("Args len " +str(len(sys.argv)))
-print("4th argument " sys.argv[4])
+print("4th argument " +sys.argv[4])
 
 
 if sys.argv[1]=="deploy":

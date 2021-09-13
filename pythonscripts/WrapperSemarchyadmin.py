@@ -1,4 +1,3 @@
-
 import sys
 from datetime import datetime
 import mainapp
@@ -7,22 +6,22 @@ from mainapp import SemarchyClient
 #Main calling mechanism start below
 #Initialize the class ClassName(object):
 #python script takes the command line arguments as below
-#to export e.g py WrapperSemarchyadmin.py <export/import> <modelname> <Server> <port>
+#to export e.g py WrapperSemarchyadmin.py deploy <modelname> <SourceServer> <Sourceport> <DestinationServer> <Destinationport>
 modelName="CustomerB2CDemo"
 outputfilename="CustomerB2CDemo_0.1.xml"
 print(len(sys.argv))
 
-if len(sys.argv) < 4:
+if len(sys.argv) != 7:
     print("Insufficient arguments")
     quit()
 
 print("Test client for Semarchy admin class" +str(len(sys.argv)))
 
 
-if sys.argv[1]=="export":
-    if len(sys.argv) == 4:
+if sys.argv[1]=="deploy":
+    if len(sys.argv[4]) == "NA":
         sourceClient = SemarchyClient(sys.argv[3],"","semadmin","semadmin")
-    else:   
+    else:
         sourceClient = SemarchyClient(sys.argv[3],sys.argv[4],"semadmin","semadmin")
     try:
         latestModelVersion = sourceClient.getLatestCloseModelKey(sys.argv[2])
@@ -39,9 +38,9 @@ if sys.argv[1]=="export":
 else:
     print("Bye!")
     quit()
+
 '''
-importval = input("Do you want to continue with "+outputfilename+ " moddel import to Target(Y/N):")
-if importval.upper()=="Y":
+if importval.upper()=="import":
     openFile = open(outputfilename,"rb")
     xmldata = openFile.read()
     targetClient = SemarchyClient("prodsemarchy.eastus.cloudapp.azure.com","8088","semadmin","semadmin")
